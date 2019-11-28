@@ -1,0 +1,226 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.2 (19/9/2019)
+%
+% Original author:
+% Anshu Kumar
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[]{deedy-resume-openfont}
+\usepackage{fancyhdr}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+ 
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{Anshu}{Kumar}{ \urlstyle{same}\href{https://www.linkedin.com/in/unstoppable-anshu/}{Linkedin: anshu-kumar}\\
+\href{mailto:anshuunstoppable@gmail.com}{anshuunstoppable@gmail.com} ||  \href{https://github.com/Anshuvats}{github: anshu} || Mob-No: +91-6200954708
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.30\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+
+\subsection{Institute Of Engineering \& Management Kolkata}
+\descript{B.Tech in Computer Science \&  Engineering}
+\location{2017-2021 || Kolkata, India}
+\location{ Cum. GPA: 8.57 / 10.0 \\
+Major GPA: 8.89 / 10.0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Links} 
+Github:// \href{https://github.com/Anshuvats}{\bf anshu-kumar} \\
+LinkedIn://  \href{https://www.linkedin.com/in/unstoppable-anshu/}{\bf anshu-kumar} \\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Coursework}
+\subsection{Undergraduate}
+C/C++/Java/JavaScript \\
+Object-Oriented-Programming \\
+Data Structure \\
+Algorithms \\
+Mathematics \\
+Web Development \\
+Operating-System \\
+Cloud-Computing  \\
+Competitive Programming \\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\subsection{Programming}
+C \textbullet{}   C++ \textbullet{} Java  \textbullet{} JavaScript \\
+
+\subsection{FrameWork}
+NodeJs \textbullet{}   Spring-Boot \textbullet{} ReactJs  
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Experience
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+\runsubsection{DEVELOPER STUDENT CLUBS IEM }
+\descript{| WEB DEVELOPER}
+\descript{| CORE TEAM MEMBER }
+\location{Feb 2019 - Present | Kolkata, India}
+\sectionsep
+
+\runsubsection{THE SPARKS FOUNDATION}
+\descript{| WEB DEVELOPMENT INTERN }
+\location{Feb 2019 – April 2019 | Kolkata, India}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Worked on REST API USING SPRING BOOT 
+\item This is a demonstration of Rest API's using spring boot(java framework), My SQL as a Database and Postman as a client.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{GIRLSCRIPT SUMMER OF CODE}
+\descript{| OPEN SOURCE CONTRIBUTER }
+\location{Mar 2019 – MAy 2019 | Kolkata, India}
+\begin{tightemize}
+\item Worked on various project and learnt open-source or version-control system \item Ranked 37 in 3 months long Girl Script Summer of Code (GSSoC) open-source program, among more than 500+ active participants.
+\end{tightemize}
+\sectionsep
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Projects
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Projects} 
+\begin{tabular}{rll}
+2019	     & REST API USING SPRING BOOT \\
+\end{tabular}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     AWARDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Awards} 
+\begin{tabular}{rll}
+2019	     & 1\textsuperscript{st}/3000 & Best Library User Award \\
+2019	     & top 37\textsuperscript{th}/700 & GSSoC'19(3-Month Open-Source program) \\
+\end{tabular}
+\item National Assessment by CBSE:- 99.86 and 98.5 percentile in Qualitative   and Quantitative assessment by CBSE.
+\sectionsep
+
+\section{Extra Curricular Activities}
+\runsubsection{Innovacion}
+\descript{| Annual Technoloy Fest Of IEM}
+\begin{tightemize}
+\item Participated in Algorithmist
+\end{tightemize}
+
+
+\runsubsection{COMPUTER SOCIETY OF INDIA}
+\descript{| Institute of Engineering and Management,Kolkata}
+\begin{tightemize}
+\item Student Member
+\end{tightemize}
+
+\runsubsection{IEM CODING OLYMPIAD}
+\descript{| Institute of Engineering and Management,Kolkata}
+\begin{tightemize}
+\item Participant
+\end{tightemize}
+
+\runsubsection{IEM CODING OLYMPIAD}
+\descript{| Institute of Engineering and Management,Kolkata}
+\begin{tightemize}
+\item organising team member
+\end{tightemize}
+\nocite{*}
+
+\end{minipage} 
+\end{document}  \documentclass[]{article}
