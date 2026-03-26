@@ -1,226 +1,150 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Deedy - One Page Two Column Resume
-% LaTeX Template
-% Version 1.2 (19/9/2019)
-%
-% Original author:
-% Anshu Kumar
-%
-% Original repository:
-% https://github.com/Anshuvats/anshu-kumar-resume
-%
-% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
-%
-% This template uses several fonts not included with Windows/Linux by
-% default. If you get compilation errors saying a font is missing, find the line
-% on which the font is used and either change it to a font included with your
-% operating system or comment the line out to use the default font.
-% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% 
-% TODO:
-% 1. Integrate biber/bibtex for article citation under publications.
-% 2. Figure out a smoother way for the document to flow onto the next page.
-% 3. Add styling information for a "Projects/Hacks" section.
-% 4. Add location/address information
-% 5. Merge OpenFont and MacFonts as a single sty with options.
-% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-% CHANGELOG:
-% v1.1:
-% 1. Fixed several compilation bugs with \renewcommand
-% 2. Got Open-source fonts (Windows/Linux support)
-% 3. Added Last Updated
-% 4. Move Title styling into .sty
-% 5. Commented .sty file.
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-% Known Issues:
-% 1. Overflows onto second page if any column's contents are more than the
-% vertical limit
-% 2. Hacky space on the first bullet point on the second column.
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%-------------------------
+% Jake's Resume Template — 1 Page
+%-------------------------
 
+\documentclass[letterpaper,11pt]{article}
 
-\documentclass[]{deedy-resume-openfont}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
- 
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome}
+\input{glyphtounicode}
+
 \pagestyle{fancy}
 \fancyhf{}
- 
-\begin{document}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%     LAST UPDATED DATE
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%     TITLE NAME
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\namesection{Anshu}{Kumar}{ \urlstyle{same}\href{https://www.linkedin.com/in/unstoppable-anshu/}{Linkedin: anshu-kumar}\\
-\href{mailto:anshuunstoppable@gmail.com}{anshuunstoppable@gmail.com} ||  \href{https://github.com/Anshuvats}{github: anshu} || Mob-No: +91-6200954708
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+%-------------------------
+% Custom Commands
+\newcommand{\resumeItem}[1]{
+  \item\small{{#1 \vspace{-2pt}}}
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%     COLUMN ONE
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
 
-\begin{minipage}[t]{0.30\textwidth} 
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     EDUCATION
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%=============================================================================
+\begin{document}
 
-\section{Education} 
+%-------------------------
+% HEADER
+%-------------------------
+\begin{center}
+    {\Huge \scshape \textbf{Anshu Kumar}} \\ \vspace{4pt}
+    \small
+    \faPhone\ \href{tel:+91-7764055017}{+91-7764055017} \quad
+    \faEnvelope\ \href{mailto:anshuunstoppable@gmail.com}{anshuunstoppable@gmail.com} \quad
+    \faLinkedinSquare\ \href{https://www.linkedin.com/in/anshu-unstoppable/}{linkedin.com/in/anshu-unstoppable} \quad
+    \faGithub\ \href{https://github.com/Anshuvats}{github.com/Anshuvats}
+\end{center}
 
-\subsection{Institute Of Engineering \& Management Kolkata}
-\descript{B.Tech in Computer Science \&  Engineering}
-\location{2017-2021 || Kolkata, India}
-\location{ Cum. GPA: 8.57 / 10.0 \\
-Major GPA: 8.89 / 10.0}
+%-------------------------
+% SUMMARY
+%-------------------------
+\section{Summary}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+    Full Stack Java Developer with \textbf{4+ years} of experience in scalable microservices, cloud-native systems, and AI-driven development across \textbf{AWS \& Azure}, currently building products for \textbf{16M+ students} at \textbf{Houghton Mifflin Harcourt}.
+  }}
+\end{itemize}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     LINKS
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Links} 
-Github:// \href{https://github.com/Anshuvats}{\bf anshu-kumar} \\
-LinkedIn://  \href{https://www.linkedin.com/in/unstoppable-anshu/}{\bf anshu-kumar} \\
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     COURSEWORK
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Coursework}
-\subsection{Undergraduate}
-C/C++/Java/JavaScript \\
-Object-Oriented-Programming \\
-Data Structure \\
-Algorithms \\
-Mathematics \\
-Web Development \\
-Operating-System \\
-Cloud-Computing  \\
-Competitive Programming \\
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     SKILLS
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Skills}
-\subsection{Programming}
-C \textbullet{}   C++ \textbullet{} Java  \textbullet{} JavaScript \\
-
-\subsection{FrameWork}
-NodeJs \textbullet{}   Spring-Boot \textbullet{} ReactJs  
-
-
-
-
-
-
-
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%     COLUMN TWO
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\end{minipage} 
-\hfill
-\begin{minipage}[t]{0.66\textwidth} 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     Experience
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+%-------------------------
+% EXPERIENCE
+%-------------------------
 \section{Experience}
-\runsubsection{DEVELOPER STUDENT CLUBS IEM }
-\descript{| WEB DEVELOPER}
-\descript{| CORE TEAM MEMBER }
-\location{Feb 2019 - Present | Kolkata, India}
-\sectionsep
+\resumeSubHeadingListStart
 
-\runsubsection{THE SPARKS FOUNDATION}
-\descript{| WEB DEVELOPMENT INTERN }
-\location{Feb 2019 – April 2019 | Kolkata, India}
-\vspace{\topsep} % Hacky fix for awkward extra vertical space
-\begin{tightemize}
-\item Worked on REST API USING SPRING BOOT 
-\item This is a demonstration of Rest API's using spring boot(java framework), My SQL as a Database and Postman as a client.
-\end{tightemize}
-\sectionsep
+  \resumeSubheading
+    {Houghton Mifflin Harcourt}{May 2025 -- Present}
+    {Software Engineer $\cdot$ Full Stack Developer}{Remote, India}
+    \resumeItemListStart
+      \resumeItem{Built and scaled \textbf{full-stack applications} using \textbf{Java, Spring Boot, Node.js} and \textbf{React.js} for \textbf{MAP Growth}, powering \textbf{16M+ students} globally; improved responsiveness by \textbf{35\%} via backend tuning, \textbf{Redis} caching, and optimized \textbf{SQL/DynamoDB} queries.}
+      \resumeItem{Led \textbf{Agentic AI tooling}, \textbf{Speckit integration}, and \textbf{GHEC migration}; designed async workflows with \textbf{Kafka \& ActiveMQ}, deployed via \textbf{AWS, Docker, and Kubernetes} with robust \textbf{CI/CD pipelines}.}
+      \resumeItem{Drove architecture decisions, code reviews, and mentoring in a cross-functional \textbf{Agile} environment.}
+    \resumeItemListEnd
 
-\runsubsection{GIRLSCRIPT SUMMER OF CODE}
-\descript{| OPEN SOURCE CONTRIBUTER }
-\location{Mar 2019 – MAy 2019 | Kolkata, India}
-\begin{tightemize}
-\item Worked on various project and learnt open-source or version-control system \item Ranked 37 in 3 months long Girl Script Summer of Code (GSSoC) open-source program, among more than 500+ active participants.
-\end{tightemize}
-\sectionsep
+  \resumeSubheading
+    {Infosys Limited}{August 2021 -- May 2025}
+    {Specialist Programmer $\cdot$ Full Stack Java Developer}{Pune, India (Hybrid)}
+    \resumeItemListStart
+      \resumeItem{Designed \textbf{36+ production-grade Spring Boot microservices} achieving \textbf{25\% faster response times} and \textbf{20\% higher throughput} via caching, connection pooling, and query optimization; built resilient \textbf{Azure} cloud systems with autoscaling, circuit breakers, and \textbf{JWT authentication}.}
+      \resumeItem{Owned \textbf{CI/CD pipelines} via \textbf{Azure DevOps, Docker, and Kubernetes} for zero-downtime blue-green deployments; drove observability across \textbf{56 microservices} with \textbf{Kafka-based logging}, optimized \textbf{SQL Server/Couchbase} schemas, and reduced latency through event-driven patterns.}
+      \resumeItem{Enforced code quality via \textbf{SonarQube}, unit testing, and peer reviews; collaborated in \textbf{Agile ceremonies} with frontend, UX, and product teams to deliver a \textbf{ReactJS payment module}.}
+    \resumeItemListEnd
 
+\resumeSubHeadingListEnd
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     Projects
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%-------------------------
+% TECHNICAL SKILLS
+%-------------------------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+    \textbf{Languages \& Backend} $-$ Java, Python, C++ $|$ Spring Boot, Spring Framework, Spring Cloud, Spring Security, REST API, Swagger, Apigee API Gateway, Apache Camel, Node.js, React.js \\[2pt]
+    \textbf{Databases, Caching \& Messaging} $-$ SQL, PostgreSQL, MongoDB, Couchbase, Redis, Azure SQL, DynamoDB $|$ Kafka, ActiveMQ, Message Queues \\[2pt]
+    \textbf{Cloud, DevOps \& Monitoring} $-$ AWS, Azure, Docker, Kubernetes, Terraform, CI/CD $|$ Grafana, Splunk, Kibana, SonarQube, JUnit, Mockito, Postman \\[2pt]
+    \textbf{Design \& Problem Solving} $-$ Design Patterns, Multithreading, System Design, Microservices $|$ DSA (\textbf{500+ LeetCode})
+  }}
+\end{itemize}
 
-\section{Projects} 
-\begin{tabular}{rll}
-2019	     & REST API USING SPRING BOOT \\
-\end{tabular}
-\sectionsep
+%-------------------------
+% EDUCATION
+%-------------------------
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Institute of Engineering \& Management, Kolkata}{August 2017 -- July 2021}
+    {B.Tech in Computer Science \& Engineering $|$ \textbf{DGPA: 8.74 / 10}}{}
+\resumeSubHeadingListEnd
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     AWARDS
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%-------------------------
+% AWARDS & CERTIFICATIONS
+%-------------------------
+\section{Awards \& Certifications}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+    \textbf{Certifications:} Java, Spring Boot, Spring Microservices, and Apache Kafka. \\[2pt]
+    \textbf{Achievements:} \textbf{2nd Runner-Up} at Infosys STG Hackathon Edition 15 (48-hour, \textbf{680+ teams}); received \textbf{3$\times$ STG Awards} (Unit Level) for exceptional technical contributions.
+  }}
+\end{itemize}
 
-\section{Awards} 
-\begin{tabular}{rll}
-2019	     & 1\textsuperscript{st}/3000 & Best Library User Award \\
-2019	     & top 37\textsuperscript{th}/700 & GSSoC'19(3-Month Open-Source program) \\
-\end{tabular}
-\item National Assessment by CBSE:- 99.86 and 98.5 percentile in Qualitative   and Quantitative assessment by CBSE.
-\sectionsep
-
-\section{Extra Curricular Activities}
-\runsubsection{Innovacion}
-\descript{| Annual Technoloy Fest Of IEM}
-\begin{tightemize}
-\item Participated in Algorithmist
-\end{tightemize}
-
-
-\runsubsection{COMPUTER SOCIETY OF INDIA}
-\descript{| Institute of Engineering and Management,Kolkata}
-\begin{tightemize}
-\item Student Member
-\end{tightemize}
-
-\runsubsection{IEM CODING OLYMPIAD}
-\descript{| Institute of Engineering and Management,Kolkata}
-\begin{tightemize}
-\item Participant
-\end{tightemize}
-
-\runsubsection{IEM CODING OLYMPIAD}
-\descript{| Institute of Engineering and Management,Kolkata}
-\begin{tightemize}
-\item organising team member
-\end{tightemize}
-\nocite{*}
-
-\end{minipage} 
-\end{document}  \documentclass[]{article}
+\end{document}
